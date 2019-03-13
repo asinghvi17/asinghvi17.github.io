@@ -15,7 +15,7 @@ var navbarHTML = `
     </div>
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a class="navbar-item" href="research.html">
           <span class="icon has-text-primary">
             <span class="fa fa-book"></span>
           </span>
