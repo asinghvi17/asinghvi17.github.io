@@ -2,11 +2,6 @@ var navbarHTML = `
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <span class="icon has-text-primary">
-          <span class="fa fa-home fa-2x"></span>
-        </span>
-      </a>
       <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -15,6 +10,12 @@ var navbarHTML = `
     </div>
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          <span class="icon has-text-primary">
+            <span class="fa fa-home"></span>
+          </span>
+          <span>Home</span>
+        </a>
         <a class="navbar-item" href="research.html">
           <span class="icon has-text-primary">
             <span class="fa fa-book"></span>
@@ -42,7 +43,7 @@ var navbarHTML = `
 `
 
 var viewModel = {
-    navbar: ko.observable(navbarHTML) // Initially blank
+    navbar: ko.observable(navbarHTML),
 };
 
 ko.applyBindings(viewModel);
