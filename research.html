@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pietro Vertechi's personal website</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script defer src="src/script.js"></script>
@@ -16,45 +17,41 @@
   <section class="section">
     <div class="container">
       <header>
-          <h1 class="title">
-            Research
-          </h1>
-          <p class="subtitle is-4">
-            A list of my work available online, about either neuroscience
-            or open source development.
-          </p>
+        <h1 class="title">
+          Research
+        </h1>
+        <p class="subtitle is-4">
+          A list of my work available online, about either neuroscience
+          or open source development.
+        </p>
       </header>
     </div>
   </section>
-  <section class="section">
+  <section>
     <div class="container">
       <div class="content">
 
-        <h2>Presentations</h2>
         <div class="columns">
-            <div class="column is-three-quarters">
-                <ul>
-                  <li>A cross-species accumulation of evidence under uncertainty at Cosyne 2018 - <a href="https://www.youtube.com/watch?v=1Pqkwc8gwUI">Video</a> </li>
-                  <li>JuliaDBMeta: tools to work with tabular data at JuliaCon 2018 - <a href="https://www.youtube.com/watch?v=wFzkNSoKo0U">Video</a>, <a href="https://piever.github.io/juliacon2018/build/">Slides</a> </li>
-                  <li>Open source tools for data analysis and visualization, lab meeting 2019 - <a href="https://piever.github.io/LabMeeting260219/build">Slides</a></li>
-                </ul>
-                <h2>Publications</h2>
-                <ul>
-                  <li>Unsupervised learning of an efficient short-term memory network (Vertechi, Brendel, Machens - NIPS 2014) - <a href="http://papers.nips.cc/paper/5543-unsupervised-learning-of-an-efficient-short-term-memory-network.pdf">PDF</a>
-                  <li>Learning to represent signals spike by spike (Brendel, Bourdokan, Vertechi, Machens, Denève - arXiv 2017) - <a href="https://arxiv.org/pdf/1703.03777.pdf">PDF</a>
-                  <li>Activation of serotonin neurons promotes active persistence in a probabilistic foraging task (Lottem, Banerjee, Vertechi, Sarra, oude Lohuis, Mainen - Nature Communications 2018) - <a href="https://www.nature.com/articles/s41467-018-03438-y.pdf">PDF</a>
-                  <li>Beyond topological persistence: Starting from networks (Bergomi, Ferri, Vertechi, Zuffi - arXiv 2019) - <a href="https://arxiv.org/pdf/1901.08051.pdf">PDF</a>
-                </ul>
-            </div>
-            <div class="column">
-
-            </div>
-
+          <div class="column is-three-quarters">
+            <h2>Presentations</h2>
+            <ul class="is-size-5">
+              <li>A cross-species accumulation of evidence under uncertainty at Cosyne 2018 - <a href="https://www.youtube.com/watch?v=1Pqkwc8gwUI">Video</a> </li>
+              <li>JuliaDBMeta: tools to work with tabular data at JuliaCon 2018 - <a href="https://www.youtube.com/watch?v=wFzkNSoKo0U">Video</a>, <a href="https://piever.github.io/juliacon2018/build/">Slides</a> </li>
+              <li>Open source tools for data analysis and visualization, lab meeting 2019 - <a href="https://piever.github.io/LabMeeting260219/build">Slides</a></li>
+            </ul>
+            <h2>Publications</h2>
+            <ul class="is-size-5">
+              <li>Unsupervised learning of an efficient short-term memory network (Vertechi, Brendel, Machens - NIPS 2014) - <a href="http://papers.nips.cc/paper/5543-unsupervised-learning-of-an-efficient-short-term-memory-network.pdf">PDF</a>
+              <li>Learning to represent signals spike by spike (Brendel, Bourdokan, Vertechi, Machens, Denève - arXiv 2017) - <a href="https://arxiv.org/pdf/1703.03777.pdf">PDF</a>
+              <li>Activation of serotonin neurons promotes active persistence in a probabilistic foraging task (Lottem, Banerjee, Vertechi, Sarra, oude Lohuis, Mainen - Nature Communications 2018) - <a href="https://www.nature.com/articles/s41467-018-03438-y.pdf">PDF</a>
+              <li>Beyond topological persistence: Starting from networks (Bergomi, Ferri, Vertechi, Zuffi - arXiv 2019) - <a href="https://arxiv.org/pdf/1901.08051.pdf">PDF</a>
+            </ul>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
+  <div data-bind="html: footer"></div>
 </body>
 
 </html>

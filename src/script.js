@@ -22,6 +22,12 @@ var navbarHTML = `
           </span>
           <span>Research</span>
         </a>
+        <a class="navbar-item" href="code.html">
+          <span class="icon has-text-primary">
+            <span class="fa fa-code"></span>
+          </span>
+          <span>Code</span>
+        </a>
       </div>
       <div class="navbar-end">
         <a class="navbar-item" href="https://piever.github.io/simpleblog/">
@@ -42,8 +48,19 @@ var navbarHTML = `
 </nav>
 `
 
+const footerHTML = `
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      Website created with <strong>Bulma</strong> and <strong>Knockout</strong>. 
+    </p>
+  </div>
+</footer>
+`
+
 var viewModel = {
     navbar: ko.observable(navbarHTML),
+    footer: ko.observable(footerHTML),
 };
 
 ko.applyBindings(viewModel);
