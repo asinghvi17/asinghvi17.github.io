@@ -2,13 +2,13 @@ var navbarHTML = `
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <a role="button" data-bind="css: {'is-active': burgerActive()}, click: toggleBurger" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div id="navMenu" class="navbar-menu">
+    <div data-bind="css: {'is-active': burgerActive()}" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item" href="index.html">
           <span class="icon has-text-primary">
@@ -47,6 +47,16 @@ var navbarHTML = `
   </div>
 </nav>
 `
+ko.components.register('navbar', {
+    viewModel: function() {
+        this.burgerActive = ko.observable(false);
+        this.toggleBurger = function () {
+            var current = this.burgerActive();
+            this.burgerActive(!current);
+        }
+    },
+    template: navbarHTML
+});
 
 const footerHTML = `
 <footer class="footer">
@@ -58,35 +68,8 @@ const footerHTML = `
 </footer>
 `
 
-var viewModel = {
-    navbar: ko.observable(navbarHTML),
-    footer: ko.observable(footerHTML),
-};
-
-ko.applyBindings(viewModel);
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-
-            });
-        });
-    }
-
+ko.components.register('footer', {
+    template: footerHTML
 });
+ 
+ko.applyBindings();

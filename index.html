@@ -8,13 +8,13 @@
   <link rel="icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tko/build.reference@4.0.0-alpha8/dist/build.reference.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script defer src="src/script.js"></script>
 </head>
 
 <body>
-  <div data-bind="html: navbar"></div>
+  <div data-bind="component: 'navbar'"></div>
   <section class="section">
     <div class="container">
       <header>
@@ -53,7 +53,7 @@
     </div>
     </div>
   </section>
-  <div data-bind="html: footer"></div>
+  <div data-bind="component: 'footer'"></div>
 </body>
 
 </html>
