@@ -1,4 +1,4 @@
-var navbarHTML = `
+const navbarHTML = `
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
@@ -47,7 +47,7 @@ var navbarHTML = `
   </div>
 </nav>
 `
-ko.components.register('navbar', {
+ko.components.register('navbar-component', {
     viewModel: function() {
         this.burgerActive = ko.observable(false);
         this.toggleBurger = function () {
@@ -62,14 +62,14 @@ const footerHTML = `
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      Website created with <strong>Bulma</strong> and <strong>Knockout</strong>. 
+      Website created with <strong>Bulma</strong> and <strong>Knockout</strong>.
     </p>
   </div>
 </footer>
 `
 
-ko.components.register('footer', {
+ko.components.register('footer-component', {
     template: footerHTML
 });
- 
+
 ko.applyBindings();
