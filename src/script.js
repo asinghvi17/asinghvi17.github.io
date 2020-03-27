@@ -2,13 +2,13 @@ const navbarHTML = `
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
-      <a role="button" data-bind="css: {'is-active': burgerActive()}, click: toggleBurger" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <a role="button" onclick="toggleClass(this, 'navMenu')" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div data-bind="css: {'is-active': burgerActive()}" class="navbar-menu">
+    <div class="navbar-menu" id="navMenu">
       <div class="navbar-start">
         <a class="navbar-item" href="index.html">
           <span class="icon has-text-primary">
@@ -47,29 +47,25 @@ const navbarHTML = `
   </div>
 </nav>
 `
-ko.components.register('navbar-component', {
-    viewModel: function() {
-        this.burgerActive = ko.observable(false);
-        this.toggleBurger = function () {
-            var current = this.burgerActive();
-            this.burgerActive(!current);
-        }
-    },
-    template: navbarHTML
-});
+
+const navbars = document.getElementsByTagName('navbar');
+for (let el of navbars) { el.outerHTML = navbarHTML;}
 
 const footerHTML = `
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
-      Website created with <strong>Bulma</strong> and <strong>Knockout</strong>.
+      Website created with <strong>Bulma</strong>.
     </p>
   </div>
 </footer>
 `
 
-ko.components.register('footer-component', {
-    template: footerHTML
-});
+const footers = document.getElementsByTagName('footer');
+for (let el of footers) { el.outerHTML = footerHTML;}
 
-ko.applyBindings();
+function toggleClass(el, target) {
+  el.classList.toggle('is-active');
+  const $target = document.getElementById(target);
+  $target.classList.toggle('is-active');
+}
