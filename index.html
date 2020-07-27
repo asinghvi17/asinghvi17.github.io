@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang='en' dir='ltr'>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +10,98 @@
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script defer src="src/script.js"></script>
 </head>
-
 <body>
-  <navbar></navbar>
-  <home></home>
-  <footer></footer>
+<nav class="navbar navbar has-shadow is-spaced">
+  <div class="container">
+    <div class="navbar-brand">
+      <a role="button" onclick="toggleClass(this, 'navMenu')" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          <span class="icon has-text-primary">
+            <span class="fa fa-home"></span>
+          </span>
+          <span>Home</span>
+        </a>
+        <a class="navbar-item" href="research.html">
+          <span class="icon has-text-primary">
+            <span class="fa fa-book"></span>
+          </span>
+          <span>Research</span>
+        </a>
+        <a class="navbar-item" href="code.html">
+          <span class="icon has-text-primary">
+            <span class="fa fa-code"></span>
+          </span>
+          <span>Code</span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://piever.github.io/simpleblog/">
+          <span class="icon has-text-primary">
+            <span class="fa fa-rss"></span>
+          </span>
+          <span>Blog</span>
+        </a>
+        <a class="navbar-item" href="https://github.com/piever">
+          <span class="icon has-text-primary">
+            <span class="fab fa-github"></span>
+          </span>
+          <span>Github</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section">
+  <div class="container">
+    <header>
+        <h1 class="title">
+          Pietro Vertechi
+        </h1>
+        <p class="subtitle is-4">
+          Researcher at the <a href="http://neuro.fchampalimaud.org/en/research/investigators/research-groups/group/Mainen/">Systems neuroscience lab</a> in the
+          <a href="http://neuro.fchampalimaud.org">Champalimaud Foundation</a>.
+        </p>
+    </header>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+  <div class="columns">
+      <div class="column">
+          <div class="content">
+              <img src="assets/homepicture.jpg" style="width:100%"></img>
+          </div>
+      </div>
+      <div class="column">
+          <div class="content">
+              <h2> Contact </h2>
+              <span class="is-size-5">email: <a href="mailto:pietro.vertechi@neuro.fchampalimaud.org">pietro.vertechi@neuro.fchampalimaud.org</a></span>
+              <h2> Curriculum Vitae </h2>
+              <a href="assets/CV.pdf" class="is-size-5">PDF</a>
+              <h2> Research interests </h2>
+              <ul class="is-size-5">
+                <li>Neuroscience, in particular designing behavioral task to study cognitition</li>
+                <li>Open source software development, using mainly the Julia programming language for scientific computing and Godot engine for game development</li>
+                <li>Developing novel techniques for data analysis inspired by persistent homology</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      Website created with <strong>Bulma</strong>.
+    </p>
+  </div>
+</footer>
 </body>
-
 </html>
