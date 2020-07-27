@@ -1,0 +1,71 @@
+<section class="section">
+  <div class="container">
+    <header>
+      <h1 class="title">
+        Code
+      </h1>
+      <p class="subtitle is-4">
+        A short summary useful Julia packages I have been contributing to.
+      </p>
+    </header>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-three-quarters">
+          <h2>Data storage and manipulation</h2>
+          <p class="is-size-5">
+            The <a href="https://github.com/piever/StructArrays.jl">StructArrays</a>
+            package provides an efficient implementation of the "array of structs to
+            struct of arrays" transformation.
+          </p>
+          <p class="is-size-5">
+            The packages <a href="https://juliacomputing.github.io/JuliaDB.jl/latest/">JuliaDB</a>
+            and <a href="https://piever.github.io/JuliaDBMeta.jl/latest/index.html">JuliaDBMeta</a>
+            add, on top of a "struct of arrays" container, the ability to performa standard
+            data manipulation (groupreduce, groupby, join, stack, unstack, etc...) and
+            a set of macros to simplify the API.
+          </p>
+          <p class="is-size-5">
+            The <a href="https://github.com/piever/ShiftedArrays.jl">ShiftedArrays</a>
+            package provides lazy shifted views of an array. It can be useful to store
+            shifted views of a variable that is continuously recorded during an experiment,
+            shifted relative to relevant events.
+          </p>
+          <p class="is-size-5">
+            The <a href="https://github.com/piever/GroupedErrors.jl">GroupedErrors</a>
+            package allows to create summary of "repeated measurement" data and compute
+            easily summary statistics across for example subjects. Its design is a bit
+            unconvential (excessive use of metaprogramming) and I plan to rewrite it
+            in a simpler way (<a href="https://github.com/piever/GroupSummaries.jl">here</a>
+            is a wip repository of the planned replacement).
+          </p>
+          <h2>Visualizations and interactivity</h2>
+          <p class="is-size-5">
+            Lately, I've been considering the exciting new high-performance plotting
+            package <a href="http://juliaplots.org/MakieGallery.jl/stable/">Makie</a>
+            and wrote an API layer on top of it,
+            <a href="http://juliaplots.org/MakieGallery.jl/stable/statsmakie.html">StatsMakie</a>,
+            to create statistical visualizations using the Makie infrastructure.
+            Though StatsMakie is not quite ready for publication-level figures (still lacks
+            proper automated labelling / legends and has poor support for categorical axes)
+            it is already quite usable. For paper figures I prefer the well-established
+            <a href="http://docs.juliaplots.org/latest/">Plots</a> package.
+          </p>
+          <p class="is-size-5">
+            For building user-interfaces, I've contributed to the rewrite of a
+            well-established Julia package,
+            <a href="http://juliagizmos.github.io/Interact.jl/latest/">Interact</a>,
+            which now allows two-way communication between native HTML5 widgets and Julia
+            to easily build web-apps.
+          </p>
+          <div class="iframe-container">
+            <iframe src="https://player.vimeo.com/video/273565899" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
