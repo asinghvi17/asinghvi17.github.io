@@ -8,12 +8,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script defer src="src/script.js"></script>
 </head>
 <body>
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
+      <script type="text/javascript">
+        function toggleClass(el, target) {
+          el.classList.toggle('is-active');
+          const $target = document.getElementById(target);
+          $target.classList.toggle('is-active');
+        }
+      </script>
       <a role="button" onclick="toggleClass(this, 'navMenu')" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -82,14 +88,15 @@
       <div class="column">
           <div class="content">
               <h2> Contact </h2>
-              <span class="is-size-5">email: <a href="mailto:pietro.vertechi@neuro.fchampalimaud.org">pietro.vertechi@neuro.fchampalimaud.org</a></span>
+              <span class="is-size-5">email: <a href="mailto:pietro.vertechi@gmail.com">pietro.vertechi@gmail.com</a></span>
               <h2> Curriculum Vitae </h2>
               <a href="assets/CV.pdf" class="is-size-5">PDF</a>
               <h2> Research interests </h2>
               <ul class="is-size-5">
-                <li>Neuroscience, in particular designing behavioral task to study cognitition</li>
-                <li>Open source software development, using mainly the Julia programming language for scientific computing and Godot engine for game development</li>
-                <li>Developing novel techniques for data analysis inspired by persistent homology</li>
+                <li>Neuroscience, in particular designing behavioral tasks to study cognitition.</li>
+                <li>Open source software development, using mainly the Julia programming language for scientific computing and Godot engine for game development.</li>
+                <li>Applications of category theory to machine learning.</li>
+                <li>Developing novel techniques for data analysis inspired by persistent homology.</li>
               </ul>
           </div>
       </div>

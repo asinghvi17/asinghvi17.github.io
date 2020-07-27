@@ -8,12 +8,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <script defer src="src/script.js"></script>
 </head>
 <body>
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
+      <script type="text/javascript">
+        function toggleClass(el, target) {
+          el.classList.toggle('is-active');
+          const $target = document.getElementById(target);
+          $target.classList.toggle('is-active');
+        }
+      </script>
       <a role="button" onclick="toggleClass(this, 'navMenu')" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -65,7 +71,7 @@
         Code
       </h1>
       <p class="subtitle is-4">
-        A short summary useful Julia packages I have been contributing to.
+        A short summary of Julia packages I have been contributing to.
       </p>
     </header>
   </div>
@@ -94,14 +100,6 @@
             shifted views of a variable that is continuously recorded during an experiment,
             shifted relative to relevant events.
           </p>
-          <p class="is-size-5">
-            The <a href="https://github.com/piever/GroupedErrors.jl">GroupedErrors</a>
-            package allows to create summary of "repeated measurement" data and compute
-            easily summary statistics across for example subjects. Its design is a bit
-            unconvential (excessive use of metaprogramming) and I plan to rewrite it
-            in a simpler way (<a href="https://github.com/piever/GroupSummaries.jl">here</a>
-            is a wip repository of the planned replacement).
-          </p>
           <h2>Visualizations and interactivity</h2>
           <p class="is-size-5">
             Lately, I've been considering the exciting new high-performance plotting
@@ -111,8 +109,7 @@
             to create statistical visualizations using the Makie infrastructure.
             Though StatsMakie is not quite ready for publication-level figures (still lacks
             proper automated labelling / legends and has poor support for categorical axes)
-            it is already quite usable. For paper figures I prefer the well-established
-            <a href="http://docs.juliaplots.org/latest/">Plots</a> package.
+            it is already quite usable.
           </p>
           <p class="is-size-5">
             For building user-interfaces, I've contributed to the rewrite of a

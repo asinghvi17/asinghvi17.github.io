@@ -1,6 +1,13 @@
 <nav class="navbar navbar has-shadow is-spaced">
   <div class="container">
     <div class="navbar-brand">
+      <script type="text/javascript">
+        function toggleClass(el, target) {
+          el.classList.toggle('is-active');
+          const $target = document.getElementById(target);
+          $target.classList.toggle('is-active');
+        }
+      </script>
       <a role="button" onclick="toggleClass(this, 'navMenu')" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>

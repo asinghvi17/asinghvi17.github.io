@@ -23,4 +23,16 @@ function makepage(page)
     end
 end
 
-foreach(makepage, readdir(pagedir))
+function build()
+    foreach(makepage, readdir(pagedir))
+    @info "Finished building!"
+end
+
+using FileWatching
+
+build()
+
+while true
+    watch_folder(pagedir)
+    build()
+end
